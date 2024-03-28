@@ -1,0 +1,68 @@
+@import "../../App.scss";
+
+
+
+.product-list {
+    a {
+        position: relative;
+        border-radius: 1rem;
+        color: $clr-black;
+        background-color: $clr-white;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    
+        .category {
+            position: absolute;
+            top: 2rem;
+            left: -.8rem;
+            padding: .5rem;
+            background-color: $clr-orange;
+            color: white;
+            border-radius: 0  0 0 .6rem;
+            font-weight: 600;
+        }
+    
+        .product-item-img {
+            height: 30rem;
+
+            img {
+                border-radius: 1rem 1rem 0 0 ;
+            }
+        }
+
+        .product-item-info {
+            margin-top: 2rem;
+        } 
+
+        .price {
+            padding-bottom: 2rem;
+            .old-price {
+                color: $clr-gray;
+                margin-top: -.3rem;
+                margin-right: 1rem;
+                text-decoration: line-through;
+                font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            .new-price {
+                position: relative;
+                margin-right: 1rem;
+                font-family:  Arial, Helvetica, sans-serif;
+                font-weight: bold;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -.9rem;
+                    left:0;
+                    height: 2px;
+                    width: 100%;
+                    background-color:$clr-orange;
+                }
+            }
+
+            .discount {
+                color: $clr-orange;
+            }
+        }
+    }
+}

@@ -1,0 +1,171 @@
+@import "../../App.scss";
+
+.product-single {
+    .product-single-content {
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+        .product-single-l {
+            .product-img {
+                .product-img-zoom {
+                    height: 60rem;
+
+                    @media screen and (max-width:576px) {
+                        height: 40rem;
+                    }
+                }
+                .product-img-thumbs {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-top: 1rem;
+                    img {
+                        cursor: pointer;
+                        height: 15rem;
+                        background-position: center;
+                        background-size: cover;
+
+                        @media screen and (max-width: 576px) {
+                            height: 10rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .product-single-r {
+            margin: auto 0;
+            .product-details {
+                padding: 3rem 1rem;
+                font-family: Arial, Helvetica, sans-serif;
+
+                .title {
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    position: relative;
+                    margin-bottom: 3rem;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 90%;
+                        height: 1.5px;
+                        margin-bottom: -.5rem;
+                        background-color: rgba($clr-orange, $alpha: .1);
+                    }
+                }
+
+                .pare {
+                    text-transform: capitalize;
+                    margin-bottom: 1.5rem;
+                }
+
+                .info {
+                    text-transform: capitalize;
+                    .vert-line {
+                        background-color:#a31624;
+
+                        @media screen and (max-width: 576px) {
+                            display: none;
+                        }
+                    }
+                }
+
+                .price {
+                    background-color: $clr-whitesmoke;
+                    padding: 2rem 3rem;
+                    border-radius: 1rem;
+                    margin: 2.5rem 0;
+
+                    .old-price {
+                        text-decoration: line-through;
+                    }
+
+                    span {
+                        text-transform: capitalize;
+                    }
+
+                    .new-price {
+                        font-weight: 600;
+                        margin-right: 1rem;
+                        color: #000;
+                    }
+
+                    .discount {
+                        margin: 3rem 0;
+                        padding: .2rem 1.5rem;
+                        letter-spacing: 1px;
+                        color: $clr-white;
+                        font-weight: 600;
+                        background-color:#a31624;
+                    }
+
+                    @media screen and (max-width: 576px) {
+                        padding: 1rem ;
+
+                        .discount {
+                            margin: 0;
+                        }
+                    }
+                }
+
+                .qty {
+                    .qty-text {
+                        font-size: 25px;
+                    }
+                    
+                    .qty-change {
+                        border: 1px solid rgb(111, 22, 22);
+                        gap: 1rem;
+                        
+                        .qty-decrease {
+                            padding: .3rem 1rem;
+                            background-color: $clr-whitesmoke ;
+                            border-right:1px solid gray ;
+                        }
+                        .qty-increase {
+                            padding: .4rem 1rem;
+                            background-color: #a31624 ;
+                            border-left: 1px solid gray
+                        }
+                    }
+                }
+
+                .btns {
+                    .add-to-cart-btn {
+                        background-color: rgba(181, 26, 26, 0.811);
+                        padding: 1.5rem 2rem;
+                        color:#fff;
+                        box-shadow: 1px 1px 1px rgb(0 0 0 / 0.2);
+                    }
+
+                    .buy-now {
+                        background-color:#a31624;
+                        padding: 1.5rem 2rem;
+                        color:$clr-white;
+                        box-shadow: 1px 1px 1px rgb(0 0 0 / 0.2);
+                    }
+
+                    @media screen and (max-width:576px) {
+                        .add-to-cart-btn {
+                            padding: 1rem 1.5rem;
+                        }
+
+                        .buy-now {
+                            padding: 1rem 1.5rem;
+                            margin-top: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

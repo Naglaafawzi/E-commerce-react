@@ -1,0 +1,20 @@
+@import "../../App.scss";
+
+.footer {
+    background: $clr-black;
+
+    span {
+        display: block;
+        margin-top: 2rem;
+    }
+
+    @media screen and (max-width: 576px) {
+        a {
+            font-size: 12px;
+        }
+
+        span {
+            font-size: 12px;
+        }
+    }
+}

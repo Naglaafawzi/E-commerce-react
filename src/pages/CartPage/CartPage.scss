@@ -1,0 +1,169 @@
+@import "../../App.scss";
+
+.empty-cart {
+    min-height: 64.5vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    img {
+        width: 15rem;
+        height: 15rem;
+        margin-bottom: 1rem;
+    }
+
+    .shopping-btn {
+        padding: 1rem 2rem;
+        border-radius: .5rem;
+        margin: 1rem 0;
+
+        &:hover {
+            background-color: transparent;
+            color: $clr-orange;
+            border: 1px solid $clr-orange;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        min-height: 71.5vh;
+    }
+
+    @media screen and (max-width: 576px) {
+        min-height: 50vh;
+
+        img {
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+}
+
+
+.cart {
+    min-height: 68.3vh;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 3rem;
+    
+
+    .cart-ctable {
+        margin-top: 3rem;
+        height: fit-content;
+
+        .cart-chead {
+            padding:2rem;
+            margin-bottom: 3rem;
+
+            .cart-ctr {
+                display: grid;
+                grid-template-columns: 10% 30% 14% 18% 14% 14%;
+
+            }
+            @media screen and (max-width:576px) {
+                overflow-x: scroll;
+                scroll-behavior: smooth;
+                .cart-ctr {
+                    grid-template-columns: 20% 60% 30% 50% 40% 30%;
+                }
+            }
+        }
+
+        .cart-cbody {
+            padding: 3rem 2rem;
+
+            .cart-ctr {
+                position: relative;
+                display: grid;
+                grid-template-columns: 10% 30% 14% 18% 14% 14%;
+                margin-bottom: 5rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                
+                &::after {
+                    content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 1.5px;
+                        margin-bottom: -1rem;
+                        background-color: rgba($clr-gray, $alpha: .1);
+                }
+
+                .cart-ctd {
+                    .cart-ctxt {
+                        text-transform: capitalize;
+                    }
+
+                    .qty-change {
+                        width: fit-content;
+                        border: 1px solid rgb(179, 174, 174);
+                        gap: 1rem;
+                        
+                        .qty-decrease {
+                            padding: .3rem 1rem;
+                            background-color: $clr-whitesmoke ;
+                            border-right:1px solid gray ;
+                        }
+                        .qty-increase {
+                            padding: .3rem 1rem;
+                            background-color: $clr-whitesmoke ;
+                            border-left: 1px solid gray
+                        }
+                    }
+
+                    .delete-btn {
+                        background-color:#a31624;
+                        color: $clr-white;
+                        padding: .7rem 1rem;
+                        border-radius: .5rem;
+                    }
+                }
+            }
+
+            @media screen and (max-width:576px) {
+                overflow-x: scroll;
+                scroll-behavior: smooth;
+                .cart-ctr {
+                    grid-template-columns: 20% 60% 30% 50% 40% 30%;
+                }
+            }
+        }
+        .cart-cfoot {
+            margin-top: 3rem;
+            padding: 2rem;
+
+            .cart-cfoot-l {
+                .clear-cart-btn {
+                    color: #a31624;
+                    padding: 1rem 2rem;
+                    border: 1px solid #a31624;
+                }
+            }
+
+            .cart-cfoot-r {
+                .total-txt {
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+
+                .check-btn {
+                    padding: 1rem 2rem;
+                    border-radius: .5rem;
+                    width: 100%;
+                    margin-top: 1rem;
+                }
+            }
+
+            @media screen and (max-width:576px) {
+                padding: 1rem;
+                flex-direction: column;
+            }
+        }
+    }
+
+    @media screen and (max-width:991px) {
+            min-height: 74.4vh;
+    }
+    @media screen and (max-width:576px) {
+            min-height: 55.4vh;
+    }
+}
